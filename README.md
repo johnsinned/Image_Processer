@@ -1,4 +1,4 @@
-<img width="1824" height="614" alt="image" src="https://github.com/user-attachments/assets/4554d187-b526-4a3d-a782-b6bc529380c5" />This project is a RESTful Image Processing API built using FastAPI and implemented using Python 3.11.6.
+This project is a RESTful Image Processing API built using FastAPI and implemented using Python 3.11.6.
 
 The system allows users to upload JPG and PNG images, automatically performs validation and processing, generates proportional thumbnails, and uses an AI vision model to produce an image caption.
 
