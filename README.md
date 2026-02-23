@@ -3,12 +3,12 @@ This project is a RESTful Image Processing API built using FastAPI and implement
 The system allows users to upload JPG and PNG images, automatically performs validation and processing, generates proportional thumbnails, and uses an AI vision model to produce an image caption.
 
 Key features include:
-Image upload (JPG & PNG only)
-Magic-byte validation (prevents renamed file spoofing)
-Proportional thumbnail generation (50% and 25% of original size)
-AI-powered image captioning (BLIP model)
-Processing statistics endpoint
-Structured logging
+- Image upload (JPG & PNG only)
+- Magic-byte validation (prevents renamed file spoofing)
+- Proportional thumbnail generation (50% and 25% of original size)
+- AI-powered image captioning (BLIP model)
+- Processing statistics endpoint
+- Structured logging
 
 Installation Steps:
 1. Clone the repository via "git clone https://github.com/johnsinned/Image_Processer.git" in your bash terminal and cd into the folder via "cd Image_Processer".
