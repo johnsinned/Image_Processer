@@ -45,6 +45,8 @@ User can use the web GUI at http://127.0.0.1:8000/docs to directly upload images
 For example, to upload an image, the user can first expand the POST /upload.
 <img width="919" height="83" alt="image" src="https://github.com/user-attachments/assets/6faa6b02-87e7-4fef-afef-1a5ea3c2de15" />
 The user can then press "Try it out" and upload thier image.
+<img width="1823" height="288" alt="image" src="https://github.com/user-attachments/assets/a2ff6e96-89d0-458e-aa56-263043a5e870" />
+
 <img width="1836" height="588" alt="image" src="https://github.com/user-attachments/assets/bf18b8c7-3cf2-451a-986b-69eff1192889" />
 After uploading, the user can press execute to start processing the image.
 <img width="1824" height="614" alt="image" src="https://github.com/user-attachments/assets/07347811-6885-4947-b464-971fb76daa51" />
