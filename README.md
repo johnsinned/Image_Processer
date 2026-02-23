@@ -56,6 +56,7 @@ The user can then see the response below:
 Processing Pipeline Explanation:
 
 When an image is uploaded, the system performs the following steps:
+
 Step 1 — File Validation
 Verifies the file using Pillow (magic-byte validation)
 Rejects unsupported formats
