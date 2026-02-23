@@ -15,6 +15,8 @@ Installation Steps:
 2. Create a virtual environment via "python -m venv venv" and activate it using "venv\Scripts\activate".
 3. Install the required dependencies using "pip install -r requirements.txt".
 4. To start the server, execute "uvicorn app.main:app --reload" from the root directory of the project and the server will start at http://127.0.0.1:8000 where the web GUI used to interact with it is at http://127.0.0.1:8000/docs.
+<img width="1899" height="739" alt="image" src="https://github.com/user-attachments/assets/af57c224-a4ab-475c-a6a7-d55fd51c3dd5" />
+
 
 API Documentation:
 POST /upload
