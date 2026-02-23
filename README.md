@@ -24,10 +24,10 @@ POST /upload
 Uploads an image and processes it.
 
 GET /api/images
-Returns all processed images (including failed ones).
+Returns all processed images (including failed ones) and their metadata.
 
 GET /api/images/{image_id}
-Returns metadata and caption for a specific image.
+Returns metadata and caption for a specific image, the time an image was processed is at GMT+00.
 
 GET /api/images/{image_id}/thumbnails/{size}
 Retrieves a generated thumbnail where the medium and small thumbnails are 50% and 25% of the original size uploaded respectively.
@@ -49,4 +49,40 @@ The user can then press "Try it out" and upload thier image.
 
 <img width="1836" height="588" alt="image" src="https://github.com/user-attachments/assets/bf18b8c7-3cf2-451a-986b-69eff1192889" />
 After uploading, the user can press execute to start processing the image.
-<img width="1824" height="614" alt="image" src="https://github.com/user-attachments/assets/07347811-6885-4947-b464-971fb76daa51" />
+<img width="1816" height="586" alt="image" src="https://github.com/user-attachments/assets/46be05c4-c94e-45b5-ad10-3fac47ce599a" />
+The user can then see the response below:
+<img width="1776" height="583" alt="image" src="https://github.com/user-attachments/assets/e311b5a7-c8bd-49d8-b997-9bce7ba59e5d" />
+
+Processing Pipeline Explanation:
+
+When an image is uploaded, the system performs the following steps:
+Step 1 — File Validation
+Verifies the file using Pillow (magic-byte validation)
+Rejects unsupported formats
+Logs invalid attempts
+
+Step 2 — Metadata Extraction
+Extracts width, height, format, and file size
+Generates a unique UUID for the image
+
+Step 3 — Thumbnail Generation
+Medium thumbnail → 50% of original dimensions
+Small thumbnail → 25% of original dimensions
+Saves thumbnails locally
+
+Step 4 — AI Caption Generation
+Uses Salesforce BLIP image captioning model
+Generates a natural language description
+Adds caption to API response
+
+Step 5 — Logging
+Logs upload attempts
+Logs processing success or failure
+Logs caption generation
+Stores logs in logs/app.log
+
+Step 6 — Statistics Tracking
+Tracks total uploads
+Tracks failed uploads
+Calculates success rate
+Calculates average processing time
