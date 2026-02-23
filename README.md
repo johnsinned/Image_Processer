@@ -19,6 +19,7 @@ Installation Steps:
 
 
 API Documentation:
+
 POST /upload
 Uploads an image and processes it.
 
@@ -39,5 +40,6 @@ Success rate
 Average processing time
 
 Example usage:
+
 User can use the web GUI at http://127.0.0.1:8000/docs to directly upload images and return processed images and their thumbnails and etc.
 <img width="1824" height="614" alt="image" src="https://github.com/user-attachments/assets/07347811-6885-4947-b464-971fb76daa51" />
