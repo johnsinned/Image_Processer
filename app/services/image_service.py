@@ -77,13 +77,14 @@ async def process_upload(file: UploadFile):
     # Calculate proportional sizes
     medium_size = (int(width * 0.5), int(height * 0.5))
     small_size = (int(width * 0.25), int(height * 0.25))
-    extension = img.format.lower()
-    format_map = {
-        "jpeg": "jpg",
-        "png": "png"
-    }
-
-    display_format = format_map.get(extension, extension)
+    if img.format == "JPEG":
+        extension = "jpg"
+    elif img.format == "PNG":
+        extension = "png"
+    else:
+        extension = img.format.lower()
+    
+    display_format = extension
 
     # ---- MEDIUM (50%) ----
     medium_img = img.copy()
